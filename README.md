@@ -1,11 +1,120 @@
-# Sample Snack app
+Gerenciador de Tarefas (React Native + Expo)
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+Este projeto é uma versão refatorada e modular do Gerenciador de Tarefas, originalmente desenvolvido em um único arquivo.  
+A refatoração foi feita com base em boas práticas de organização, componentização e reutilização de código.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+---
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+Objetivo da Atividade
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+O objetivo foi refatorar o código original para uma estrutura organizada e modular, separando componentes, hooks, estilos e constantes em pastas específicas.
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+---
+
+Estrutura de Pastas
+
+gestionador-tarefas/
+
+├── src/
+
+│ ├── components/
+
+│ │ ├── Header.js
+
+│ │ ├── TaskForm.js
+
+│ │ ├── TaskItem.js
+
+│ │ ├── TaskList.js
+
+│ │ └── EmptyList.js
+
+│ ├── hooks/
+
+│ │ ├── useTasks.js
+
+│ │ └── useAnimations.js
+
+│ ├── styles/
+
+│ │ └── styles.js
+
+│ └── utils/
+
+│ └── constants.js
+
+├── App.js
+
+├── README.md
+
+└── package.json
+
+
+---
+
+Componentes
+
+Header.js
+Exibe o título principal e o contador de tarefas pendentes.
+
+TaskForm.js
+Contém o formulário de entrada para criar e editar tarefas.
+
+TaskItem.js
+Representa cada tarefa individual, com botões para editar, concluir ou excluir.
+
+TaskList.js
+Lista todas as tarefas usando FlatList, integrando com TaskItem.
+
+EmptyList.js
+Renderiza uma mensagem informativa quando não há tarefas cadastradas.
+
+---
+
+Hooks Customizados
+
+useTasks.js
+Responsável por gerenciar o estado global das tarefas:
+- Criar, editar, excluir e marcar tarefas como concluídas  
+- Controlar o ID da tarefa sendo editada  
+
+useAnimations.js
+Gerencia as animações de entrada e saída das tarefas:
+- Usa Animated.Value do React Native  
+- Suporte para fade-in e slide-up nos itens  
+
+---
+
+Estilos
+
+Todos os estilos foram centralizados em:
+src/styles/styles.js
+
+---
+
+Constantes
+
+O arquivo `constants.js` contém:
+- Cores principais da aplicação
+- Textos fixos e padrões de formatação
+
+---
+
+Conceitos Aplicados
+
+- Componentização: separação de responsabilidades por função  
+- Hooks personalizados: lógica reutilizável isolada do componente  
+- Centralização de estilos e constantes: manutenção facilitada  
+- Reatividade com useState e useEffect  
+- Animações suaves usando Animated do React Native  
+- Boas práticas de UX/UI: mensagens, botões e cores consistentes
+
+---
+
+Tecnologias Utilizadas
+
+- React Native  
+- Expo  
+- JavaScript (ES6+)  
+- React Hooks  
+- Animated API  
