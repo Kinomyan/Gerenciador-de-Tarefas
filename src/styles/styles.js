@@ -1,0 +1,106 @@
+import { StyleSheet } from 'react-native';
+import { COLORS } from '../utils/constants';
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.background,
+    paddingTop: 60,
+  },
+  header: {
+    paddingHorizontal: 20,
+    marginBottom: 20,
+  },
+  titulo: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: COLORS.textDark,
+    textAlign: 'center',
+  },
+  subtitulo: {
+    fontSize: 16,
+    color: COLORS.textLight,
+    textAlign: 'center',
+    marginTop: 5,
+  },
+  formulario: {
+    paddingHorizontal: 20,
+    marginBottom: 20,
+  },
+  input: {
+    backgroundColor: COLORS.white,
+    padding: 15,
+    borderRadius: 12,
+    fontSize: 16,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    marginBottom: 10,
+  },
+  botaoAdicionar: {
+    backgroundColor: COLORS.primary,
+    padding: 15,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  textoBotaoAdicionar: {
+    color: COLORS.white,
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  botaoLimpar: {
+    backgroundColor: COLORS.light,
+    padding: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  textoBotaoLimpar: {
+    color: COLORS.textLight,
+    fontSize: 14,
+  },
+  lista: { flex: 1 },
+  conteudoLista: { paddingHorizontal: 20, paddingBottom: 20 },
+  itemTarefa: {
+    backgroundColor: COLORS.white,
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 15,
+    borderRadius: 12,
+    marginBottom: 10,
+  },
+  conteudoTarefa: { flex: 1, flexDirection: 'row', alignItems: 'center' },
+  checkbox: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: COLORS.border,
+    marginRight: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  checkboxConcluida: {
+    backgroundColor: COLORS.primary,
+    borderColor: COLORS.primary,
+  },
+  checkmark: { color: COLORS.white, fontSize: 14, fontWeight: 'bold' },
+  textoContainer: { flex: 1 },
+  textoTarefa: { fontSize: 16, color: COLORS.textDark },
+  textoConcluido: {
+    textDecorationLine: 'line-through',
+    color: COLORS.textLight,
+  },
+  dataTarefa: { fontSize: 12, color: COLORS.muted, marginTop: 2 },
+  botoesAcao: { flexDirection: 'row' },
+  botaoAcao: { padding: 8, borderRadius: 6, marginLeft: 8 },
+  botaoEditar: { backgroundColor: COLORS.edit },
+  botaoExcluir: { backgroundColor: COLORS.delete },
+  textoBotaoAcao: { fontSize: 16 },
+  listaVazia: { alignItems: 'center', paddingVertical: 40 },
+  textoListaVazia: {
+    textAlign: 'center',
+    color: COLORS.textLight,
+    fontSize: 16,
+    lineHeight: 24,
+  },
+});
